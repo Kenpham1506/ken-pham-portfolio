@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #f06595, #ff6b6b);
+    background: linear-gradient(135deg, #ff6b6b, #f06595);
     color: #fff;
     padding: 40px 20px;
     text-align: center;
@@ -61,60 +61,49 @@ nav {
     top: 0;
     z-index: 3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-nav.sticky {
-    background-color: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
 }
 
 nav a {
     color: #333;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1.1em;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #f06595;
-    text-decoration: underline;
-    transform: scale(1.1);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 3px solid #f06595;
+    border-bottom: 2px solid #f06595;
     padding-bottom: 10px;
     color: #333;
 }
 
 .game, .demo, .bot, .about, .contact {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .game h2, .demo h2, .bot h2, .about h2, .contact h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    color: #f06595;
 }
 
-.game-description {
-    font-size: 1.2em;
-    margin-top: 5px;
-    color: #555;
+.game-description, .about p, .contact p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
 .contact form {
@@ -123,33 +112,25 @@ nav a:hover {
 }
 
 .contact input, .contact textarea {
-    margin-bottom: 15px;
-    padding: 15px;
-    font-size: 1.1em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-}
-
-.contact input:focus, .contact textarea:focus {
-    border-color: #f06595;
-    outline: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .contact button {
-    padding: 15px;
-    font-size: 1.2em;
+    padding: 10px;
+    font-size: 1.1em;
     background-color: #f06595;
     color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact button:hover {
-    background-color: #e54b8c;
-    transform: scale(1.05);
+    background-color: #ff6b6b;
 }
 
 footer {
@@ -157,7 +138,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 footer p {
