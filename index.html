@@ -68,13 +68,45 @@
             padding-bottom: 10px;
         }
 
-        .game {
+        .game, .about, .contact {
             margin-bottom: 30px;
         }
 
-        .game h2 {
+        .game h2, .about h2, .contact h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
+        }
+
+        .about p, .contact p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            padding: 10px;
+            font-size: 1.1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #555;
         }
 
         footer {
@@ -104,6 +136,7 @@
     </nav>
 
     <div class="container">
+        <!-- Games Section -->
         <section id="games">
             <h2 class="section-title">Games</h2>
 
@@ -119,6 +152,30 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2591738" width="552" height="167">
                     <a href="https://ken-pham.itch.io/office-cats">Office Cats by Ken's Studio</a>
                 </iframe>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about">
+                <p>Hello! I'm Ken Pham, a passionate game developer and designer who loves creating immersive and engaging experiences. I specialize in 2D and 3D games, focusing on player experience and innovative mechanics. My journey in game development started with a simple curiosity and has grown into a fulfilling career where I constantly learn and evolve.</p>
+                <p>With each project, I strive to push the boundaries of creativity and deliver games that entertain and inspire. Feel free to explore my portfolio and reach out if you're interested in collaborating or learning more about my work.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="contact">
+                <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
     </div>
