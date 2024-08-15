@@ -1,84 +1,89 @@
-/* General styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+body, html {
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    box-sizing: border-box;
 }
 
-/* Header styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f8f8f8; /* Light background color for the whole page */
+}
+
+/* Header Styling */
 header {
-    background: linear-gradient(135deg, #FF5F6D, #FFC371); /* Vibrant gradient */
-    color: #fff;
+    background: #ff6f6f; /* Fading red */
+    color: white;
     text-align: center;
     padding: 20px;
     position: relative;
-    height: 120px; /* Adjusted height to fit logo */
+    z-index: 10;
 }
 
 header .logo {
-    width: 80px; /* Adjust the size of the logo as needed */
-    height: 80px; /* Make sure height is equal to width for a perfect circle */
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image covers the circle without distortion */
-    position: absolute; /* Allows precise positioning */
-    left: 10px; /* Adjust based on header layout */
-    top: 20px; /* Adjust based on header layout */
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    border-radius: 50%; /* Makes the logo circular */
+    position: absolute;
+    left: 20px; /* Space from the left edge */
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-header .header-content {
-    margin-left: 100px; /* Adjust margin to fit logo */
-    text-align: left; /* Align text to the left */
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-/* Navigation styles */
+header p {
+    margin: 5px 0 0;
+}
+
+/* Navigation Bar Styling */
 nav {
-    background: #FF5F6D;
-    color: #fff;
+    background: #e74c3c; /* Slightly darker red */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     position: sticky;
     top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     padding: 10px 20px;
-    font-weight: bold;
-    transition: background 0.3s, color 0.3s;
-    margin: 0 10px;
+    display: inline-block;
 }
 
 nav a:hover {
-    background: #FFC371;
-    color: #FF5F6D;
+    background: #c0392b; /* Darker red on hover */
     border-radius: 5px;
 }
 
-/* Container styles */
+/* Container Styling */
 .container {
-    padding: 40px 20px; /* Adjust padding */
+    padding: 0 30px; /* Adds padding on left and right sides */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Section styles */
+/* Section Styling */
 section {
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
-/* Section title styles */
 .section-title {
-    font-size: 2em;
-    color: #FF5F6D;
-    margin-bottom: 20px;
+    background: #ff6f6f; /* Fading red */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .section-title a {
-    color: inherit;
+    color: white;
     text-decoration: none;
 }
 
@@ -86,87 +91,58 @@ section {
     text-decoration: underline;
 }
 
-/* Game, Demo, Bot styles */
+/* Game, Demo, and Bot Styling */
 .game, .demo, .bot {
-    margin-bottom: 30px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    margin-bottom: 20px;
+}
+
+iframe {
+    width: 100%; /* Full width */
+    border: none;
+    border-radius: 5px;
 }
 
 .game-description, .demo-description, .bot-description {
-    color: #555;
-    font-style: italic; /* Italicized descriptions */
+    font-style: italic;
+    color: #666;
 }
 
-/* Form styles */
+/* Contact Form Styling */
 .contact form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.contact input, .contact textarea, .contact button {
+.contact input, .contact textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
 .contact textarea {
-    resize: vertical;
-    min-height: 100px;
+    height: 150px; /* Adjust height as needed */
 }
 
 .contact button {
-    background: #FF5F6D;
-    color: #fff;
+    background: #ff6f6f; /* Fading red */
+    color: white;
     border: none;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .contact button:hover {
-    background: #FFC371;
+    background: #e74c3c; /* Darker red on hover */
 }
 
-/* Footer styles */
+/* Footer Styling */
 footer {
-    background: #FF5F6D;
-    color: #fff;
+    background: #e74c3c; /* Darker red */
+    color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        padding: 20px 10px;
-    }
-    
-    header .logo {
-        width: 60px; /* Adjust logo size for smaller screens */
-        height: 60px; /* Maintain circular shape */
-        left: 10px;
-        top: 10px;
-    }
-    
-    header .header-content {
-        margin-left: 70px; /* Adjust margin for logo on smaller screens */
-    }
-    
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav a {
-        padding: 10px 0;
-    }
-    
-    .container {
-        padding: 20px 10px;
-    }
+    margin-top: 20px;
 }
