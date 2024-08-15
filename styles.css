@@ -104,12 +104,13 @@ nav a:hover {
 
 iframe {
     width: 100%;
+    height: auto; /* Adjust height to be responsive */
     border: none;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 0 auto; /* Center the iframe */
     display: block; /* Ensure iframe is displayed as block */
-    padding: 0 10px; /* Add padding around the iframe */
+    padding: 0; /* Remove padding around the iframe */
 }
 
 .contact form {
