@@ -1,121 +1,97 @@
-/* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif; /* Google Font */
+    margin: 0;
+    padding: 0;
     color: #333;
-    background: linear-gradient(to right, #f8d7da, #fff3cd); /* Light pink to light yellow gradient */
-    line-height: 1.6;
+    background: linear-gradient(to bottom right, #fce4ec, #fff9c4); /* Light pink fading into light yellow */
 }
 
-/* Header Styling */
 header {
     background: #ff6f6f; /* Fading red */
-    color: white;
-    text-align: center;
+    color: #fff;
     padding: 20px;
+    text-align: center;
     position: relative;
     z-index: 10;
-    border-bottom: 5px solid #e74c3c; /* Slight border for separation */
 }
 
 header .logo {
-    width: 60px; /* Adjust the size as needed */
-    height: 60px;
-    border-radius: 50%; /* Circular logo */
     position: absolute;
     left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 3px solid #fff; /* White border around the logo */
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    font-weight: bold;
 }
 
 header p {
-    margin: 5px 0 0;
+    margin: 0;
     font-size: 1.2em;
 }
 
-/* Navigation Bar Styling */
 nav {
-    background: #e74c3c; /* Slightly darker red */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+    background: #ff3d3d; /* Slightly darker red */
+    color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid #c0392b; /* Darker border */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 20;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 10px 20px;
-    display: inline-block;
     font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 nav a:hover {
-    background: #c0392b; /* Darker red on hover */
-    border-radius: 5px;
-    color: #fff;
-}
-
-/* Container Styling */
-.container {
-    padding: 0 40px; /* Increased padding */
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Section Styling */
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #fff; /* White background for sections */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.section-title {
     background: #ff6f6f; /* Fading red */
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.5em;
-    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2em;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .section-title a {
-    color: white;
+    color: #ff6f6f; /* Fading red */
     text-decoration: none;
+    border-bottom: 2px solid #ff6f6f;
 }
 
 .section-title a:hover {
-    text-decoration: underline;
+    color: #e74c3c; /* Darker red */
+    border-bottom: 2px solid #e74c3c;
 }
 
-/* Game, Demo, and Bot Styling */
+/* Game, Demo, and Bot Sections */
 .game, .demo, .bot {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-iframe {
-    width: 100%; /* Full width */
+.game iframe, .demo iframe, .bot iframe {
     border: none;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 100%; /* Ensure iframes don't exceed their container */
+    height: 167px;
 }
 
 .game-description, .demo-description, .bot-description {
@@ -128,17 +104,27 @@ iframe {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Increased gap between form elements */
+    max-width: 600px; /* Limit the max width of the form */
+    margin: 0 auto; /* Center the form */
+    padding: 0 20px; /* Add some padding */
 }
 
 .contact input, .contact textarea {
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 100%; /* Full width within the form */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.contact input[type="text"], 
+.contact input[type="email"] {
+    max-width: 100%; /* Prevent them from exceeding the container width */
 }
 
 .contact textarea {
-    height: 150px; /* Adjust height as needed */
+    height: 150px; /* Fixed height for the textarea */
+    resize: vertical; /* Allow resizing only vertically */
 }
 
 .contact button {
@@ -150,18 +136,20 @@ iframe {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s ease;
+    align-self: flex-start; /* Align button to the start of the form */
 }
 
 .contact button:hover {
     background: #e74c3c; /* Darker red on hover */
 }
 
-/* Footer Styling */
+/* Footer Styles */
 footer {
-    background: #e74c3c; /* Darker red */
-    color: white;
+    background: #ff3d3d; /* Slightly darker red */
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 0.9em;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
