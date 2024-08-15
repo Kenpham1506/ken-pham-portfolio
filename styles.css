@@ -37,12 +37,12 @@ header p {
 nav {
     position: sticky;
     top: 0;
-    background-color: #ff4c4c; /* Solid red color */
+    background-color: #d32f2f; /* Solid red color */
     padding: 10px 0;
     display: flex;
     justify-content: center;
     z-index: 1000;
-    border-bottom: 2px solid #d0a91f; /* Gold color */
+    border-bottom: 2px solid #fbc02d; /* Gold color */
 }
 
 nav a {
@@ -56,7 +56,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #d0a91f; /* Gold color */
+    background-color: #fbc02d; /* Gold color */
     color: #fff;
     transform: scale(1.05);
 }
@@ -85,7 +85,7 @@ nav a:hover {
 }
 
 .section-title a:hover {
-    color: #d0a91f; /* Gold color */
+    color: #fbc02d; /* Gold color */
 }
 
 .game, .demo, .bot {
@@ -105,7 +105,7 @@ nav a:hover {
 }
 
 .game h3 a:hover, .demo h3 a:hover, .bot h3 a:hover {
-    color: #d0a91f; /* Gold color */
+    color: #fbc02d; /* Gold color */
 }
 
 .game-description {
@@ -119,6 +119,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px; /* Space between form elements */
+    align-items: center; /* Center align the form elements */
 }
 
 .contact input, .contact textarea {
@@ -127,14 +128,8 @@ nav a:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-}
-
-.contact input {
-    width: 100%;
-}
-
-.contact textarea {
-    width: 100%;
+    width: 100%; /* Full width for inputs and textarea */
+    max-width: 600px; /* Max width to ensure it doesn’t stretch too much */
 }
 
 .contact button {
@@ -146,10 +141,12 @@ nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 600px; /* Max width to match input fields */
 }
 
 .contact button:hover {
-    background-color: #d0a91f; /* Gold color */
+    background-color: #fbc02d; /* Gold color */
 }
 
 footer {
