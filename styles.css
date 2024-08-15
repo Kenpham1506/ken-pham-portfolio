@@ -6,7 +6,7 @@ body, h1, h2, p {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fef9f9; /* Light red background */
+    background-color: #fef7f0; /* Light yellow background */
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -14,10 +14,12 @@ body {
 }
 
 header {
-    background-color: #ff4c4c; /* Red color */
+    background: linear-gradient(to right, #ff6f61, #ff4c4c); /* Fading red gradient */
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+    z-index: 1000;
 }
 
 header h1 {
@@ -34,11 +36,12 @@ header p {
 nav {
     position: sticky;
     top: 0;
-    background-color: #e63946; /* Darker red color */
+    background-color: #ff4c4c; /* Red color */
     padding: 10px 0;
     display: flex;
     justify-content: center;
     z-index: 1000;
+    border-bottom: 2px solid #e63946; /* Darker red color for border */
 }
 
 nav a {
@@ -103,25 +106,35 @@ nav a:hover {
 .game-description {
     font-size: 1em;
     color: #666;
+    margin-top: 5px;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Space between form elements */
 }
 
 .contact input, .contact textarea {
-    margin-bottom: 10px;
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact input {
+    width: 100%;
+}
+
+.contact textarea {
+    width: 100%;
 }
 
 .contact button {
     padding: 10px;
     font-size: 1.1em;
-    background-color: #ff4c4c; /* Red color */
+    background-color: #ff6f61; /* Fading red color */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -130,11 +143,11 @@ nav a:hover {
 }
 
 .contact button:hover {
-    background-color: #e63946; /* Darker red color */
+    background-color: #ff4c4c; /* Red color */
 }
 
 footer {
-    background-color: #ff4c4c; /* Red color */
+    background: linear-gradient(to right, #ff6f61, #ff4c4c); /* Fading red gradient */
     color: #fff;
     text-align: center;
     padding: 20px 0;
