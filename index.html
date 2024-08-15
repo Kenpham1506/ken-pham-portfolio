@@ -5,26 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ken Pham's Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset some default browser styles */
+        body, h1, h2, p {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
         }
-        h1 {
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
             color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
             text-align: center;
         }
-        .project {
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 2em;
             margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .game {
+            margin-bottom: 30px;
+        }
+
+        .game h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 1em;
         }
     </style>
 </head>
 <body>
-    <h1>Ken Pham's Portfolio</h1>
-    <div class="project">
-        <h2>Project Title</h2>
-        <p>Description of the project.</p>
+
+    <header>
+        <h1>Ken Pham's Portfolio</h1>
+        <p>Game Developer &amp; Designer</p>
+    </header>
+
+    <nav>
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="games">
+            <h2 class="section-title">Games</h2>
+
+            <div class="game">
+                <h2>Sukuna</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2560339" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/sukuna">Sukuna by Ken's Studio</a>
+                </iframe>
+            </div>
+
+            <div class="game">
+                <h2>Office Cats</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2591738" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/office-cats">Office Cats by Ken's Studio</a>
+                </iframe>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Ken Pham | All Rights Reserved</p>
+    </footer>
+
 </body>
 </html>
