@@ -6,7 +6,7 @@ body, h1, h2, p {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fef7f0; /* Light yellow background */
+    background-color: #f9f4f2; /* Light neutral background */
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #ff6f61, #ff4c4c); /* Fading red gradient */
+    background: linear-gradient(to right, #ff6f61, #d066e2, #f5a623); /* Fading red to purple, pink, and gold */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -36,12 +36,12 @@ header p {
 nav {
     position: sticky;
     top: 0;
-    background-color: #ff4c4c; /* Red color */
+    background-color: #d066e2; /* Purple color */
     padding: 10px 0;
     display: flex;
     justify-content: center;
     z-index: 1000;
-    border-bottom: 2px solid #e63946; /* Darker red color for border */
+    border-bottom: 2px solid #ff6f61; /* Fading red color */
 }
 
 nav a {
@@ -55,7 +55,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #f1a7a7; /* Light red color */
+    background-color: #ff6f61; /* Fading red color */
+    color: #fff;
     transform: scale(1.05);
 }
 
@@ -70,18 +71,18 @@ nav a:hover {
 .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ff4c4c; /* Red color */
+    border-bottom: 2px solid #ff6f61; /* Fading red color */
     padding-bottom: 10px;
 }
 
 .section-title a {
-    color: #ff4c4c; /* Red color */
+    color: #ff6f61; /* Fading red color */
     text-decoration: none;
     font-weight: bold;
 }
 
 .section-title a:hover {
-    color: #e63946; /* Darker red color */
+    color: #d066e2; /* Purple color */
 }
 
 .game, .demo, .bot {
@@ -94,13 +95,13 @@ nav a:hover {
 }
 
 .game h3 a, .demo h3 a, .bot h3 a {
-    color: #ff4c4c; /* Red color */
+    color: #ff6f61; /* Fading red color */
     text-decoration: none;
     font-weight: bold;
 }
 
 .game h3 a:hover, .demo h3 a:hover, .bot h3 a:hover {
-    color: #e63946; /* Darker red color */
+    color: #d066e2; /* Purple color */
 }
 
 .game-description {
@@ -143,11 +144,11 @@ nav a:hover {
 }
 
 .contact button:hover {
-    background-color: #ff4c4c; /* Red color */
+    background-color: #d066e2; /* Purple color */
 }
 
 footer {
-    background: linear-gradient(to right, #ff6f61, #ff4c4c); /* Fading red gradient */
+    background: linear-gradient(to right, #ff6f61, #d066e2, #f5a623); /* Fading red to purple, pink, and gold */
     color: #fff;
     text-align: center;
     padding: 20px 0;
