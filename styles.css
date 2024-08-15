@@ -6,9 +6,10 @@ body, html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Google Font */
     color: #333;
-    background: #f8f8f8; /* Light background color for the whole page */
+    background: linear-gradient(to right, #ff6f6f, #f8f8f8); /* Gradient background */
+    line-height: 1.6;
 }
 
 /* Header Styling */
@@ -19,25 +20,29 @@ header {
     padding: 20px;
     position: relative;
     z-index: 10;
+    border-bottom: 5px solid #e74c3c; /* Slight border for separation */
 }
 
 header .logo {
     width: 80px; /* Adjust the size as needed */
     height: 80px;
-    border-radius: 50%; /* Makes the logo circular */
+    border-radius: 50%; /* Circular logo */
     position: absolute;
-    left: 20px; /* Space from the left edge */
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
+    border: 3px solid #fff; /* White border around the logo */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 header p {
     margin: 5px 0 0;
+    font-size: 1.2em;
 }
 
 /* Navigation Bar Styling */
@@ -49,6 +54,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 2px solid #c0392b; /* Darker border */
 }
 
 nav a {
@@ -56,16 +62,19 @@ nav a {
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
     background: #c0392b; /* Darker red on hover */
     border-radius: 5px;
+    color: #fff;
 }
 
 /* Container Styling */
 .container {
-    padding: 0 30px; /* Adds padding on left and right sides */
+    padding: 0 40px; /* Increased padding */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -73,6 +82,10 @@ nav a:hover {
 /* Section Styling */
 section {
     margin: 20px 0;
+    padding: 20px;
+    background: #fff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .section-title {
@@ -80,6 +93,8 @@ section {
     color: white;
     padding: 10px;
     border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .section-title a {
@@ -99,7 +114,8 @@ section {
 iframe {
     width: 100%; /* Full width */
     border: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .game-description, .demo-description, .bot-description {
@@ -111,11 +127,11 @@ iframe {
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Increased gap between form elements */
 }
 
 .contact input, .contact textarea {
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 100%;
@@ -129,9 +145,11 @@ iframe {
     background: #ff6f6f; /* Fading red */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .contact button:hover {
@@ -143,6 +161,7 @@ footer {
     background: #e74c3c; /* Darker red */
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: 20px;
+    font-size: 0.9em;
 }
