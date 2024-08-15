@@ -107,7 +107,7 @@ nav a:active {
 }
 
 iframe {
-    width: calc(100% - 80px); /* Remove the black bars by setting the width with padding adjustment */
+    width: calc(100% - 100px); /* Remove the black bars by setting the width with padding adjustment */
     height: auto; /* Adjust height to be responsive */
     border: none;
     border-radius: 5px;
