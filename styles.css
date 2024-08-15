@@ -108,7 +108,7 @@ nav a:hover {
     color: #fbc02d; /* Gold color */
 }
 
-.game-description {
+.game-description, .demo-description, .bot-description {
     font-size: 1em;
     color: #666;
     margin-top: 5px;
@@ -118,6 +118,7 @@ nav a:hover {
 .contact {
     display: flex;
     justify-content: center; /* Center the form */
+    padding: 20px;
 }
 
 .contact form {
