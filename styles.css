@@ -4,13 +4,9 @@ body, h1, h2, p {
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -18,68 +14,46 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #ff6b6b, #f06595);
+    background-color: #333;
     color: #fff;
-    padding: 40px 20px;
+    padding: 20px 0;
     text-align: center;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: padding 0.3s, font-size 0.3s;
-}
-
-header.shrink {
-    padding: 20px 20px;
-}
-
-header.shrink h1 {
-    font-size: 2em;
-}
-
-header.shrink p {
-    font-size: 1.1em;
 }
 
 header h1 {
     margin-bottom: 10px;
-    font-size: 3em;
-    font-weight: bold;
-    transition: font-size 0.3s;
+    font-size: 2.5em;
+    transition: font-size 0.3s ease;
 }
 
 header p {
-    font-size: 1.5em;
-    font-weight: 300;
-    transition: font-size 0.3s;
+    font-size: 1.2em;
+    transition: font-size 0.3s ease;
 }
 
 nav {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
-    z-index: 3;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #444;
+    padding: 10px 0;
     display: flex;
     justify-content: center;
+    z-index: 1000;
 }
 
 nav a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding: 10px;
     border-radius: 5px;
-    margin: 0 10px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #f06595;
-    color: #fff;
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 .container {
@@ -93,23 +67,42 @@ nav a:hover {
 .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #f06595;
+    border-bottom: 2px solid #333;
     padding-bottom: 10px;
-    color: #333;
 }
 
-.game, .demo, .bot, .about, .contact {
+.section-title a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section-title a:hover {
+    color: #555;
+}
+
+.game, .demo, .bot {
     margin-bottom: 30px;
 }
 
-.game h2, .demo h2, .bot h2, .about h2, .contact h2 {
+.game h3, .demo h3, .bot h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.game-description, .about p, .contact p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
+.game h3 a, .demo h3 a, .bot h3 a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.game h3 a:hover, .demo h3 a:hover, .bot h3 a:hover {
+    color: #555;
+}
+
+.game-description {
+    font-size: 1em;
+    color: #666;
 }
 
 .contact form {
@@ -128,15 +121,16 @@ nav a:hover {
 .contact button {
     padding: 10px;
     font-size: 1.1em;
-    background-color: #f06595;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #ff6b6b;
+    background-color: #555;
 }
 
 footer {
