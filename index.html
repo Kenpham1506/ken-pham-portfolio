@@ -11,6 +11,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f0f0;
@@ -68,11 +72,11 @@
             padding-bottom: 10px;
         }
 
-        .game, .about, .contact {
+        .game, .about, .contact, .demo, .bot {
             margin-bottom: 30px;
         }
 
-        .game h2, .about h2, .contact h2 {
+        .game h2, .about h2, .contact h2, .demo h2, .bot h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
         }
@@ -130,15 +134,17 @@
     </header>
 
     <nav>
-        <a href="#games">Games</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#games" aria-label="View My Games">My Games</a>
+        <a href="#demos" aria-label="View My Demos">My Demos</a>
+        <a href="#bots" aria-label="View My Bots">My Bots</a>
+        <a href="#about" aria-label="Learn About Me">About</a>
+        <a href="#contact" aria-label="Contact Me">Contact</a>
     </nav>
 
     <div class="container">
-        <!-- Games Section -->
+        <!-- My Games Section -->
         <section id="games">
-            <h2 class="section-title">Games</h2>
+            <h2 class="section-title">My Games</h2>
 
             <div class="game">
                 <h2>Sukuna</h2>
@@ -151,6 +157,51 @@
                 <h2>Office Cats</h2>
                 <iframe frameborder="0" src="https://itch.io/embed/2591738" width="552" height="167">
                     <a href="https://ken-pham.itch.io/office-cats">Office Cats by Ken's Studio</a>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- My Demos Section -->
+        <section id="demos">
+            <h2 class="section-title">My Demos</h2>
+
+            <div class="demo">
+                <h2>Multiplayer Shooter</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2818060" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/multiplayer-shooter">Multiplayer Shooter by Ken's Studio</a>
+                </iframe>
+            </div>
+
+            <div class="demo">
+                <h2>Car</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2636584" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/car">Car by Ken's Studio, tqhuy306</a>
+                </iframe>
+            </div>
+
+            <div class="demo">
+                <h2>Buddy</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2576509" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/buddy">Buddy by Ken's Studio</a>
+                </iframe>
+            </div>
+
+            <div class="demo">
+                <h2>Barrel Shooter</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2617222" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/barrel-shooter">Barrel Shooter by Ken's Studio</a>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- My Bots Section -->
+        <section id="bots">
+            <h2 class="section-title">My Bots</h2>
+
+            <div class="bot">
+                <h2>Mihoyo Check-in Bot</h2>
+                <iframe frameborder="0" src="https://itch.io/embed/2837376" width="552" height="167">
+                    <a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo check-in bot by Ken's Studio</a>
                 </iframe>
             </div>
         </section>
