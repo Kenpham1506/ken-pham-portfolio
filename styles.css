@@ -61,19 +61,25 @@ nav {
     top: 0;
     z-index: 3;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
     color: #333;
     text-decoration: none;
-    margin: 0 15px;
+    padding: 10px 20px;
     font-size: 1.2em;
-    transition: color 0.3s;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    color: #f06595;
+    background-color: #f06595;
+    color: #fff;
 }
 
 .container {
