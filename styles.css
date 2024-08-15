@@ -1,4 +1,4 @@
-/* Reset some default browser styles */
+/* styles.css */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -59,7 +59,7 @@ nav {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 70px; /* Adjust this value to the height of your header */
+    top: 70px;
     z-index: 999;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
