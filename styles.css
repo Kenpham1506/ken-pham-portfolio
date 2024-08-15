@@ -1,134 +1,166 @@
-/* Reset some default browser styles */
-body, h1, h2, p, a {
+/* Reset some default styles */
+body, h1, h2, h3, p, a, input, textarea, button {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Set body font and background */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px;
 }
 
+/* Header styles */
 header {
-    background-color: #800000; /* Deep red */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #c44536, #7a1c17);
+    padding: 10px 20px;
+    position: relative;
     z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: padding 0.3s ease;
+}
+
+/* Logo style */
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Title and description style */
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.title-text {
+    margin-left: 15px;
 }
 
 header h1 {
-    margin-bottom: 10px;
-    font-size: 2.5em;
+    font-size: 2rem;
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1rem;
+    opacity: 0.9;
 }
 
-header img.logo {
-    width: 100px; /* Adjust the size as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%; /* If you want a circular logo */
-}
-
+/* Sticky nav bar */
 nav {
-    text-align: center;
-    background-color: #550000; /* Slightly darker red */
-    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #511f13;
+    padding: 10px;
     position: sticky;
-    top: 85px; /* Just below the header */
+    top: 0;
     z-index: 999;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
 }
 
 nav a {
-    color: #ffcc00; /* Gold */
+    color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    border: 1px solid #ffcc00;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border: 2px solid #7a1c17;
     border-radius: 5px;
+    background-color: #c44536;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #ffcc00;
-    color: #550000; /* Dark red */
+    background-color: #7a1c17;
 }
 
+/* Container */
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 30px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
+/* Section titles */
 .section-title {
-    font-size: 2em;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #800000;
-    padding-bottom: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffd700;
+    border-bottom: 2px solid #7a1c17;
+    padding-bottom: 5px;
 }
 
-.section-title a {
-    color: #800000; /* Deep red */
-    text-decoration: none;
+/* Game and demo titles */
+.game h3, .demo h3, .bot h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #ff6347;
 }
 
-.section-title a:hover {
-    text-decoration: underline;
-}
-
-.game, .demo, .bot {
-    margin-bottom: 30px;
-}
-
+/* Description */
 .game-description, .demo-description, .bot-description {
+    font-size: 1rem;
     font-style: italic;
-    color: #666;
-    margin-top: 10px;
 }
 
+/* Contact section */
 .contact form {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact input, .contact textarea {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    font-size: 1rem;
+    border: 1px solid #7a1c17;
     border-radius: 5px;
+    background-color: #333;
+    color: #fff;
 }
 
 .contact button {
     padding: 10px;
-    background-color: #800000; /* Deep red */
-    color: #fff;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
+    background-color: #c44536;
+    color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #ffcc00; /* Gold */
-    color: #550000; /* Dark red */
+    background-color: #7a1c17;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #800000; /* Deep red */
-    color: #fff;
-    position: sticky;
-    top: 100%;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
 }
+
+/* Reduce header size on scroll */
+window.onscroll = function() {
+    var header = document.querySelector("header");
+    var logo = document.querySelector(".logo");
+
+    if (window.scrollY > 50) {
+        header.style.padding = "5px 20px";
+        logo.style.width = "40px";
+    } else {
+        header.style.padding = "10px 20px";
+        logo.style.width = "50px";
+    }
+};
