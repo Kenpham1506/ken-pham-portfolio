@@ -1,12 +1,12 @@
 /* Reset some default browser styles */
-body, h1, h2, p {
+body, h1, h2, p, a {
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #fef9f2; /* Light cream background */
+    background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -14,162 +14,121 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #ff6f61, #ff4c4c); /* Fading red gradient */
+    background-color: #800000; /* Deep red */
     color: #fff;
-    padding: 30px 20px; /* Increased padding */
+    padding: 20px 0;
     text-align: center;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    border-bottom: 3px solid #ff4c4c; /* Red border for distinct separation */
 }
 
 header h1 {
-    margin: 0;
+    margin-bottom: 10px;
     font-size: 2.5em;
-    transition: font-size 0.3s ease;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.3em; /* Slightly larger font size */
-    transition: font-size 0.3s ease;
+    font-size: 1.2em;
+}
+
+header img.logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%; /* If you want a circular logo */
 }
 
 nav {
+    text-align: center;
+    background-color: #550000; /* Slightly darker red */
+    padding: 10px 0;
     position: sticky;
-    top: 0;
-    background-color: #d32f2f; /* Solid red color */
-    padding: 15px 0; /* Increased padding */
-    display: flex;
-    justify-content: center;
-    z-index: 1000;
-    border-bottom: 2px solid #fbc02d; /* Gold color */
+    top: 85px; /* Just below the header */
+    z-index: 999;
 }
 
 nav a {
-    color: #fff;
+    color: #ffcc00; /* Gold */
     text-decoration: none;
-    margin: 0 20px; /* Increased margin */
-    font-size: 1.2em; /* Slightly larger font size */
-    padding: 12px 20px; /* Increased padding */
+    margin: 0 15px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border: 1px solid #ffcc00;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #fbc02d; /* Gold color */
-    color: #fff;
-    transform: scale(1.05);
-}
-
-nav a:active {
-    scroll-behavior: smooth; /* Smooth scrolling */
+    background-color: #ffcc00;
+    color: #550000; /* Dark red */
 }
 
 .container {
-    max-width: 1200px; /* Increase the max-width for better layout */
-    margin: 20px auto; /* Center the container with margin */
-    padding: 30px 50px; /* Increased padding for both sides */
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 30px;
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
-    font-size: 2.2em; /* Slightly larger title */
-    border-bottom: 2px solid #ff4c4c; /* Red border */
+    font-size: 2em;
     margin-bottom: 20px;
+    border-bottom: 2px solid #800000;
     padding-bottom: 10px;
 }
 
 .section-title a {
-    color: #ff4c4c; /* Red color */
+    color: #800000; /* Deep red */
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .section-title a:hover {
-    color: #fbc02d; /* Gold color */
+    text-decoration: underline;
 }
 
 .game, .demo, .bot {
-    margin-bottom: 40px;
-}
-
-.game h3, .demo h3, .bot h3 {
-    font-size: 1.6em; /* Slightly larger headings */
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .game-description, .demo-description, .bot-description {
     font-style: italic;
     color: #666;
-}
-
-iframe {
-    width: calc(100% - 100px); /* Remove the black bars by setting the width with padding adjustment */
-    height: auto; /* Adjust height to be responsive */
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 0 auto; /* Center the iframe */
-    display: block; /* Ensure iframe is displayed as block */
+    margin-top: 10px;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Increased gap between form fields */
-    width: 100%;
-    max-width: 700px; /* Increased max-width for better form layout */
-    margin: 0 auto;
-    padding: 30px; /* Increased padding */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .contact input, .contact textarea {
-    padding: 14px; /* Increased padding */
-    font-size: 1.1em; /* Slightly larger font size */
-    border: 2px solid #d32f2f;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
-    width: calc(100% - 28px); /* Full width minus padding */
-    transition: border-color 0.3s ease;
-}
-
-.contact input:focus, .contact textarea:focus {
-    border-color: #fbc02d;
-    outline: none;
-}
-
-.contact textarea {
-    resize: vertical;
-    min-height: 200px; /* Increased minimum height */
 }
 
 .contact button {
-    padding: 14px; /* Increased padding */
-    font-size: 1.2em; /* Slightly larger font size */
-    background-color: #ff6f61;
+    padding: 10px;
+    background-color: #800000; /* Deep red */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #fbc02d;
+    background-color: #ffcc00; /* Gold */
+    color: #550000; /* Dark red */
 }
 
 footer {
-    background-color: #ff6f61;
-    color: #fff;
     text-align: center;
-    padding: 15px; /* Increased padding */
-    position: relative;
-    z-index: 1000;
-    border-top: 2px solid #fbc02d; /* Gold color */
+    padding: 20px 0;
+    background-color: #800000; /* Deep red */
+    color: #fff;
+    position: sticky;
+    top: 100%;
 }
