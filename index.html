@@ -17,7 +17,7 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
             margin: 0;
@@ -25,7 +25,7 @@
         }
 
         header {
-            background-color: #333;
+            background: linear-gradient(135deg, #ff6b6b, #f06595);
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -38,26 +38,31 @@
         header h1 {
             margin-bottom: 10px;
             font-size: 2.5em;
+            font-weight: bold;
         }
 
         header p {
             font-size: 1.2em;
+            font-weight: 300;
         }
 
         nav {
             text-align: center;
-            background-color: #444;
+            background-color: #fff;
             padding: 10px 0;
+            border-bottom: 1px solid #ddd;
         }
 
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.1em;
+            transition: color 0.3s;
         }
 
         nav a:hover {
+            color: #ff6b6b;
             text-decoration: underline;
         }
 
@@ -66,14 +71,16 @@
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
             font-size: 2em;
             margin-bottom: 20px;
-            border-bottom: 2px solid #333;
+            border-bottom: 3px solid #ff6b6b;
             padding-bottom: 10px;
+            color: #ff6b6b;
         }
 
         .game, .about, .contact, .demo, .bot {
@@ -83,11 +90,13 @@
         .game h2, .about h2, .contact h2, .demo h2, .bot h2 {
             font-size: 1.5em;
             margin-bottom: 10px;
+            color: #333;
         }
 
-        .about p, .contact p {
-            font-size: 1.1em;
-            margin-bottom: 10px;
+        .game-description {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #555;
         }
 
         .contact form {
@@ -99,22 +108,23 @@
             margin-bottom: 10px;
             padding: 10px;
             font-size: 1em;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
 
         .contact button {
             padding: 10px;
             font-size: 1.1em;
-            background-color: #333;
+            background-color: #ff6b6b;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .contact button:hover {
-            background-color: #555;
+            background-color: #f06595;
         }
 
         footer {
@@ -155,6 +165,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2560339" width="552" height="167">
                     <a href="https://ken-pham.itch.io/sukuna">Sukuna by Ken's Studio</a>
                 </iframe>
+                <p class="game-description">My first game project, where I explored fundamental game development techniques and created an engaging experience.</p>
             </div>
 
             <div class="game">
@@ -162,6 +173,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2591738" width="552" height="167">
                     <a href="https://ken-pham.itch.io/office-cats">Office Cats by Ken's Studio</a>
                 </iframe>
+                <p class="game-description">Building on the "Buddy" project, this game introduces advanced AI features and dynamic gameplay.</p>
             </div>
         </section>
 
@@ -174,7 +186,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2818060" width="552" height="167">
                     <a href="https://ken-pham.itch.io/multiplayer-shooter">Multiplayer Shooter by Ken's Studio</a>
                 </iframe>
-                <p>This project demonstrates my ability to create a network that supports peer-to-peer and server-to-client multiplayer gameplay.</p>
+                <p class="game-description">This demo showcases a network system enabling peer-to-peer and server-to-client multiplayer gameplay.</p>
             </div>
 
             <div class="demo">
@@ -182,7 +194,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2636584" width="552" height="167">
                     <a href="https://ken-pham.itch.io/car">Car by Ken's Studio, tqhuy306</a>
                 </iframe>
-                <p>This demo showcases my work on vehicle physics and a system that automatically generates race tracks.</p>
+                <p class="game-description">Demonstrates advanced vehicle physics and a procedurally generated race track system for dynamic racing experiences.</p>
             </div>
 
             <div class="demo">
@@ -190,7 +202,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2576509" width="552" height="167">
                     <a href="https://ken-pham.itch.io/buddy">Buddy by Ken's Studio</a>
                 </iframe>
-                <p>In this project, I developed an AI companion that adapts and improves to match the player's preferences over time.</p>
+                <p class="game-description">An AI companion that adapts and improves based on player interactions and preferences over time.</p>
             </div>
 
             <div class="demo">
@@ -198,7 +210,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2617222" width="552" height="167">
                     <a href="https://ken-pham.itch.io/barrel-shooter">Barrel Shooter by Ken's Studio</a>
                 </iframe>
-                <p>This project reflects my efforts to create a 3D game that is compatible with both PC and Android platforms.</p>
+                <p class="game-description">A 3D game aimed at being compatible with both PC and Android platforms, showcasing cross-platform development.</p>
             </div>
         </section>
 
@@ -211,6 +223,7 @@
                 <iframe frameborder="0" src="https://itch.io/embed/2837376" width="552" height="167">
                     <a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo check-in bot by Ken's Studio</a>
                 </iframe>
+                <p class="game-description">An automation system that interacts with the Mihoyo API, including a Discord bot for user data management, a JavaScript bot utilizing cloud computing, and Google Sheets as a database. Combining these elements created a powerful and efficient bot.</p>
             </div>
         </section>
 
@@ -220,28 +233,4 @@
 
             <div class="about">
                 <p>Hello! I'm Ken Pham, a passionate game developer and designer who loves creating immersive and engaging experiences. I specialize in 2D and 3D games, focusing on player experience and innovative mechanics. My journey in game development started with a simple curiosity and has grown into a fulfilling career where I constantly learn and evolve.</p>
-                <p>With each project, I strive to push the boundaries of creativity and deliver games that entertain and inspire. Feel free to explore my portfolio and reach out if you're interested in collaborating or learning more about my work.</p>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2 class="section-title">Contact Me</h2>
-
-            <div class="contact">
-                <form action="https://formspree.io/f/xyzgpzld" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Ken Pham | All Rights Reserved</p>
-    </footer>
-
-</body>
-</html>
+                <p>
