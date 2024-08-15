@@ -8,7 +8,7 @@ body, html {
 body {
     font-family: 'Roboto', sans-serif; /* Google Font */
     color: #333;
-    background: linear-gradient(to right, #ff6f6f, #f8f8f8); /* Gradient background */
+    background: linear-gradient(to right, #f8d7da, #fff3cd); /* Light pink to light yellow gradient */
     line-height: 1.6;
 }
 
