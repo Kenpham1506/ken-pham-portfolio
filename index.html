@@ -33,24 +33,42 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: padding 0.3s, font-size 0.3s;
+        }
+
+        header.shrink {
+            padding: 10px 0;
         }
 
         header h1 {
             margin-bottom: 10px;
             font-size: 2.5em;
             font-weight: bold;
+            transition: font-size 0.3s;
+        }
+
+        header.shrink h1 {
+            font-size: 2em;
         }
 
         header p {
             font-size: 1.2em;
             font-weight: 300;
+            transition: font-size 0.3s;
+        }
+
+        header.shrink p {
+            font-size: 1em;
         }
 
         nav {
-            text-align: center;
             background-color: #fff;
             padding: 10px 0;
             border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 60px; /* Adjust this value based on the header height */
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -221,9 +239,9 @@
             <div class="bot">
                 <h2>Mihoyo Check-in Bot</h2>
                 <iframe frameborder="0" src="https://itch.io/embed/2837376" width="552" height="167">
-                    <a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo check-in bot by Ken's Studio</a>
+                    <a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo Check-in Bot by Ken's Studio</a>
                 </iframe>
-                <p class="game-description">An automation system that interacts with the Mihoyo API, including a Discord bot for user data management, a JavaScript bot utilizing cloud computing, and Google Sheets as a database. Combining these elements created a powerful and efficient bot.</p>
+                <p class="game-description">An automation system that interacts with the Mihoyo API, includes a Discord bot for user data management, a JavaScript bot leveraging cloud computing, and uses Google Sheets as a database.</p>
             </div>
         </section>
 
@@ -233,7 +251,6 @@
 
             <div class="about">
                 <p>Hello! I'm Ken Pham, a passionate game developer and designer who loves creating immersive and engaging experiences. I specialize in 2D and 3D games, focusing on player experience and innovative mechanics. My journey in game development started with a simple curiosity and has grown into a fulfilling career where I constantly learn and evolve.</p>
-                <p>
                 <p>With each project, I strive to push the boundaries of creativity and deliver games that entertain and inspire. Feel free to explore my portfolio and reach out if you're interested in collaborating or learning more about my work.</p>
             </div>
         </section>
@@ -256,6 +273,18 @@
     <footer>
         <p>&copy; 2024 Ken Pham. All rights reserved.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const headerTitle = document.querySelector('header h1');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+    </script>
 
 </body>
 </html>
