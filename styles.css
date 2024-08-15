@@ -65,7 +65,7 @@ nav a:hover {
 .container {
     max-width: 1200px; /* Increase the max-width for better layout */
     margin: 20px auto; /* Center the container with margin */
-    padding: 30px; /* Increased padding */
+    padding: 30px 40px; /* Increased padding for both sides */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -110,7 +110,6 @@ iframe {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 0 auto; /* Center the iframe */
     display: block; /* Ensure iframe is displayed as block */
-    padding: 0; /* Remove padding around the iframe */
 }
 
 .contact form {
