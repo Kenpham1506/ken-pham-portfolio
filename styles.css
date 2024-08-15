@@ -71,7 +71,7 @@ nav a:active {
     margin: 20px auto; /* Center the container with margin */
     padding: 30px 50px; /* Increased padding for both sides */
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
