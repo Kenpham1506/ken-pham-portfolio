@@ -6,7 +6,7 @@ body, h1, h2, p {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f9f0f4; /* Light pink background */
+    background-color: #fef9f9; /* Light red background */
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #ff69b4; /* Pink color */
+    background-color: #ff4c4c; /* Red color */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -34,7 +34,7 @@ header p {
 nav {
     position: sticky;
     top: 0;
-    background-color: #ff1493; /* Darker pink color */
+    background-color: #e63946; /* Darker red color */
     padding: 10px 0;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ff85b0; /* Light pink color */
+    background-color: #f1a7a7; /* Light red color */
     transform: scale(1.05);
 }
 
@@ -67,18 +67,18 @@ nav a:hover {
 .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ff69b4; /* Pink color */
+    border-bottom: 2px solid #ff4c4c; /* Red color */
     padding-bottom: 10px;
 }
 
 .section-title a {
-    color: #ff69b4; /* Pink color */
+    color: #ff4c4c; /* Red color */
     text-decoration: none;
     font-weight: bold;
 }
 
 .section-title a:hover {
-    color: #ff1493; /* Darker pink color */
+    color: #e63946; /* Darker red color */
 }
 
 .game, .demo, .bot {
@@ -91,13 +91,13 @@ nav a:hover {
 }
 
 .game h3 a, .demo h3 a, .bot h3 a {
-    color: #ff69b4; /* Pink color */
+    color: #ff4c4c; /* Red color */
     text-decoration: none;
     font-weight: bold;
 }
 
 .game h3 a:hover, .demo h3 a:hover, .bot h3 a:hover {
-    color: #ff1493; /* Darker pink color */
+    color: #e63946; /* Darker red color */
 }
 
 .game-description {
@@ -121,7 +121,7 @@ nav a:hover {
 .contact button {
     padding: 10px;
     font-size: 1.1em;
-    background-color: #ff69b4; /* Pink color */
+    background-color: #ff4c4c; /* Red color */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -130,11 +130,11 @@ nav a:hover {
 }
 
 .contact button:hover {
-    background-color: #ff1493; /* Darker pink color */
+    background-color: #e63946; /* Darker red color */
 }
 
 footer {
-    background-color: #ff69b4; /* Pink color */
+    background-color: #ff4c4c; /* Red color */
     color: #fff;
     text-align: center;
     padding: 20px 0;
