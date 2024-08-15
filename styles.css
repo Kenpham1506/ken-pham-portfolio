@@ -62,10 +62,14 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+nav a:active {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
 .container {
     max-width: 1200px; /* Increase the max-width for better layout */
     margin: 20px auto; /* Center the container with margin */
-    padding: 30px 40px; /* Increased padding for both sides */
+    padding: 30px 50px; /* Increased padding for both sides */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -103,7 +107,7 @@ nav a:hover {
 }
 
 iframe {
-    width: 100%;
+    width: calc(100% - 80px); /* Remove the black bars by setting the width with padding adjustment */
     height: auto; /* Adjust height to be responsive */
     border: none;
     border-radius: 5px;
