@@ -1,4 +1,4 @@
-/* styles.css */
+/* Reset some default browser styles */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -24,13 +24,21 @@ header {
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1; /* Lower z-index for header */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: padding 0.3s, font-size 0.3s;
 }
 
 header.shrink {
     padding: 10px 0;
+}
+
+header.shrink h1 {
+    font-size: 2em;
+}
+
+header.shrink p {
+    font-size: 1em;
 }
 
 header h1 {
@@ -40,18 +48,10 @@ header h1 {
     transition: font-size 0.3s;
 }
 
-header.shrink h1 {
-    font-size: 2em;
-}
-
 header p {
     font-size: 1.2em;
     font-weight: 300;
     transition: font-size 0.3s;
-}
-
-header.shrink p {
-    font-size: 1em;
 }
 
 nav {
@@ -59,8 +59,8 @@ nav {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 70px;
-    z-index: 999;
+    top: 70px; /* Adjusted top to be below header */
+    z-index: 2; /* Higher z-index for nav */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -83,29 +83,27 @@ nav a:hover {
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    border-bottom: 3px solid #ff6b6b;
+    border-bottom: 2px solid #333;
     padding-bottom: 10px;
-    color: #ff6b6b;
 }
 
-.game, .about, .contact, .demo, .bot {
+.game, .demo, .bot, .about, .contact {
     margin-bottom: 30px;
 }
 
-.game h2, .about h2, .contact h2, .demo h2, .bot h2 {
+.game h2, .demo h2, .bot h2, .about h2, .contact h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #333;
 }
 
 .game-description {
-    font-size: 1em;
+    font-size: 1.1em;
     margin-top: 5px;
     color: #555;
 }
@@ -119,23 +117,22 @@ nav a:hover {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 1em;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 .contact button {
     padding: 10px;
     font-size: 1.1em;
-    background-color: #ff6b6b;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .contact button:hover {
-    background-color: #f06595;
+    background-color: #555;
 }
 
 footer {
