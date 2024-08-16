@@ -2,24 +2,24 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 20px 0; /* Space on top and bottom */
-    background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
+    padding: 40px 0; /* Space on top and bottom */
+    background: linear-gradient(to bottom right, #ffe0e0, #ffffe0); /* Soft background gradient */
 }
 
 /* Header Styles */
 header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px 40px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -27,6 +27,7 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
+    transition: width 0.3s, height 0.3s;
 }
 
 .header-text {
@@ -35,14 +36,16 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px;
     color: #333;
+    transition: font-size 0.3s;
 }
 
 header p {
     margin: 5px 0 0;
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
+    transition: font-size 0.3s;
 }
 
 /* Navigation Styles */
@@ -50,9 +53,9 @@ nav {
     display: flex;
     justify-content: center;
     margin-top: 80px; /* Account for fixed header */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #eee;
     position: sticky;
     top: 70px; /* Adjusted for new header size */
     z-index: 999;
@@ -61,55 +64,60 @@ nav {
 }
 
 nav a {
-    margin: 0 20px;
+    margin: 0 15px;
     text-decoration: none;
     color: #333;
-    padding: 10px 15px; /* Increased padding for better click area */
+    padding: 10px 20px; /* Padding for better click area */
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
 }
 
 nav a:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
     color: #007bff; /* Change text color on hover */
 }
 
 /* Container Styles */
 .container {
-    margin: 20px auto; /* Space between body and footer */
+    margin-top: 100px; /* Space between body and footer */
     padding: 0 20px; /* Left and right padding for the content */
     max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center the container */
 }
 
 /* Section Title Styles */
 .section-title {
     text-align: center;
-    font-size: 32px; /* Larger font size */
-    font-weight: 600; /* Bold text */
+    font-size: 36px; /* Larger font size */
+    font-weight: 700; /* Bold text */
     margin-bottom: 30px;
     color: #333;
-    border-bottom: 2px solid #007bff; /* Underline with a color */
+    border-bottom: 3px solid #007bff; /* Underline with a color */
     display: inline-block;
-    padding-bottom: 10px; /* Space between text and underline */
+    padding-bottom: 15px; /* Space between text and underline */
 }
 
 /* Game/Demo/Bot Section Styles */
 .game, .demo, .bot {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
 iframe {
     width: 100%;
-    max-width: 552px;
-    height: 167px;
+    max-width: 600px; /* Adjusted max width */
+    height: 300px; /* Adjusted height */
     border: none;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .game-description, .demo-description, .bot-description {
-    font-size: 16px;
+    font-size: 18px;
     color: #666;
     margin-top: 10px;
+    line-height: 1.5; /* Improved readability */
 }
 
 /* Contact Form Styles */
@@ -120,18 +128,20 @@ iframe {
 form {
     display: inline-block;
     text-align: left;
-    max-width: 400px;
+    max-width: 500px; /* Increased form width */
     width: 100%;
+    margin: 0 auto; /* Center the form */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -141,29 +151,31 @@ textarea {
 
 button[type="submit"] {
     width: 100%;
-    padding: 10px;
-    background-color: #333;
+    padding: 15px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 16px;
 }
 
 button[type="submit"]:hover {
-    background-color: #555;
+    background-color: #0056b3;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 20px 0;
-    border-top: 1px solid #ddd;
-    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 2px solid #eee;
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     width: 100%; /* Full width */
     box-sizing: border-box; /* Ensure padding is included in the element's width */
     position: relative;
+    margin-top: 40px; /* Space between content and footer */
 }
 
 /* Smooth Scrolling */
@@ -172,5 +184,23 @@ html {
 }
 
 nav a {
-    scroll-margin-top: 20px; /* Offset the scrolling position to prevent header overlap */
+    scroll-margin-top: 70px; /* Offset the scrolling position to prevent header overlap */
+}
+
+/* Header Shrink on Scroll */
+header.shrink {
+    padding: 10px 20px;
+}
+
+header.shrink .logo {
+    width: 40px;
+    height: 40px;
+}
+
+header.shrink h1 {
+    font-size: 24px;
+}
+
+header.shrink p {
+    font-size: 14px;
 }
