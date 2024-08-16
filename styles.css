@@ -13,7 +13,7 @@ header {
     padding: 20px;
     display: flex;
     align-items: center;
-    gap: 20px; /* Gap between the logo and the header text */
+    gap: 20px; /* Gap between the logo and the text */
     position: relative;
     z-index: 10;
 }
@@ -25,13 +25,19 @@ header .logo {
     object-fit: cover;
 }
 
+.header-text {
+    display: flex;
+    flex-direction: column; /* Stack the heading and the subtext vertically */
+    justify-content: center;
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
 }
 
 header p {
-    margin: 0;
+    margin: 5px 0 0 0;
     font-size: 1.2em;
 }
 
