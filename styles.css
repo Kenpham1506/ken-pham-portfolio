@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0 20px; /* Add padding to the left and right */
+    padding: 0 0px; /* Add padding to the left and right */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
 }
 
@@ -15,7 +15,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid #ddd;
@@ -52,7 +52,7 @@ nav {
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 70px;
+    top: 60px;
     z-index: 999;
     width: 100%; /* Full width */
     box-sizing: border-box; /* Ensure padding is included in the element's width */
@@ -148,7 +148,7 @@ button[type="submit"]:hover {
 /* Footer Styles */
 footer {
     text-align: center;
-    padding: 0px 0;
+    padding: 20px 0;
     border-top: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
