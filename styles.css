@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif; /* Google Font */
     margin: 0;
-    padding: 0 20px; /* Added padding to the left and right sides of the entire page */
+    padding: 0; /* Remove the global padding */
     color: #333;
     background: linear-gradient(to bottom right, #fce4ec, #fff9c4); /* Light pink fading into light yellow */
 }
@@ -60,7 +60,10 @@ nav a:hover {
 }
 
 .container {
-    padding: 20px 0; /* Adjusted padding to top and bottom */
+    padding: 20px 40px; /* Added padding to the left and right sides */
+    max-width: 1200px; /* Set a max-width for the content */
+    margin: 0 auto; /* Center the content */
+    box-sizing: border-box; /* Include padding in the element's width */
 }
 
 /* Section Titles */
