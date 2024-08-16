@@ -2,24 +2,28 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 40px 0; /* Space on top and bottom */
-    background: linear-gradient(to bottom right, #ffe0e0, #ffffe0); /* Soft background gradient */
+    padding: 0; /* Remove default padding */
+    background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
+    min-height: 100vh; /* Ensure body takes up at least the viewport height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
 header {
     display: flex;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    border-bottom: 2px solid #eee;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ddd;
+    transition: padding 0.3s, font-size 0.3s; /* Smooth transition for padding and font-size */
 }
 
 .logo {
@@ -27,97 +31,87 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
-    transition: width 0.3s, height 0.3s;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for logo size */
 }
 
 .header-text {
     display: inline-block;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 header h1 {
     margin: 0;
-    font-size: 32px;
-    color: #333;
-    transition: font-size 0.3s;
+    font-size: 24px;
+    transition: font-size 0.3s; /* Smooth transition for font size */
 }
 
-header p {
+.subheader {
     margin: 5px 0 0;
-    font-size: 18px;
+    font-size: 14px;
     color: #666;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, opacity 0.3s; /* Smooth transition for font size and opacity */
 }
 
 /* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 80px; /* Account for fixed header */
-    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 60px; /* Account for fixed header */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
-    border-bottom: 2px solid #eee;
+    border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 70px; /* Adjusted for new header size */
+    top: 70px;
     z-index: 999;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 20px;
     text-decoration: none;
     color: #333;
-    padding: 10px 20px; /* Padding for better click area */
+    padding: 10px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    background-color: #f5f5f5;
-    color: #007bff; /* Change text color on hover */
+    background-color: #f0f0f0;
 }
 
 /* Container Styles */
 .container {
-    margin-top: 100px; /* Space between body and footer */
+    margin-top: 20px;
     padding: 0 20px; /* Left and right padding for the content */
-    max-width: 1200px; /* Maximum width for large screens */
-    margin: 0 auto; /* Center the container */
+    padding-bottom: 80px; /* Space between content and footer */
+    flex: 1; /* Allow container to take available space */
 }
 
 /* Section Title Styles */
 .section-title {
     text-align: center;
-    font-size: 36px; /* Larger font size */
-    font-weight: 700; /* Bold text */
-    margin-bottom: 30px;
-    color: #333;
-    border-bottom: 3px solid #007bff; /* Underline with a color */
-    display: inline-block;
-    padding-bottom: 15px; /* Space between text and underline */
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 /* Game/Demo/Bot Section Styles */
 .game, .demo, .bot {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 iframe {
     width: 100%;
-    max-width: 600px; /* Adjusted max width */
-    height: 300px; /* Adjusted height */
+    max-width: 552px;
+    height: 167px;
     border: none;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .game-description, .demo-description, .bot-description {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
     margin-top: 10px;
-    line-height: 1.5; /* Improved readability */
 }
 
 /* Contact Form Styles */
@@ -128,20 +122,18 @@ iframe {
 form {
     display: inline-block;
     text-align: left;
-    max-width: 500px; /* Increased form width */
+    max-width: 400px;
     width: 100%;
-    margin: 0 auto; /* Center the form */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 textarea {
@@ -151,31 +143,28 @@ textarea {
 
 button[type="submit"] {
     width: 100%;
-    padding: 15px;
-    background-color: #007bff;
+    padding: 10px;
+    background-color: #333;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 16px;
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #555;
 }
 
 /* Footer Styles */
 footer {
     text-align: center;
     padding: 20px 0;
-    border-top: 2px solid #eee;
-    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     width: 100%; /* Full width */
     box-sizing: border-box; /* Ensure padding is included in the element's width */
-    position: relative;
-    margin-top: 40px; /* Space between content and footer */
 }
 
 /* Smooth Scrolling */
@@ -184,23 +173,24 @@ html {
 }
 
 nav a {
-    scroll-margin-top: 70px; /* Offset the scrolling position to prevent header overlap */
+    scroll-margin-top: 20px; /* Offset the scrolling position to prevent header overlap */
 }
 
-/* Header Shrink on Scroll */
-header.shrink {
-    padding: 10px 20px;
+/* Shrinking Header Styles */
+.shrink header {
+    padding: 5px 10px; /* Smaller padding */
 }
 
-header.shrink .logo {
-    width: 40px;
-    height: 40px;
+.shrink .logo {
+    width: 30px;
+    height: 30px;
 }
 
-header.shrink h1 {
-    font-size: 24px;
+.shrink .header-text h1 {
+    font-size: 20px;
 }
 
-header.shrink p {
-    font-size: 14px;
+.shrink .subheader {
+    font-size: 12px;
+    opacity: 0;
 }
