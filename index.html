@@ -12,7 +12,7 @@
         <img src="logo.png" alt="Ken's Logo" class="logo">
         <div class="header-text">
             <h1>Ken's Portfolio</h1>
-            <p id="tagline">Game Developer & Designer</p>
+            <p class="subheader">Game Developer & Designer</p>
         </div>
     </header>
     
@@ -106,7 +106,7 @@
                     const targetElement = document.getElementById(targetId);
                     
                     if (targetElement) {
-                        const offset = -60; // Offset to scroll slightly past the header
+                        const offset = -80; // Offset to scroll slightly past the header
                         const bodyRect = document.body.getBoundingClientRect().top;
                         const elementRect = targetElement.getBoundingClientRect().top;
                         const elementPosition = elementRect - bodyRect;
@@ -119,20 +119,6 @@
                     }
                 });
             });
-        });
-
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            const tagline = document.getElementById('tagline');
-            const scrollPosition = window.scrollY;
-
-            if (scrollPosition > 60) {
-                header.classList.add('scrolled');
-                tagline.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-                tagline.classList.remove('scrolled');
-            }
         });
     </script>
 </body>
