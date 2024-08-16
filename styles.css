@@ -6,6 +6,8 @@ body {
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
     min-height: 100vh; /* Ensure body takes up at least the viewport height */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Styles */
@@ -83,6 +85,7 @@ nav a:hover {
     margin-top: 20px;
     padding: 0 20px; /* Left and right padding for the content */
     padding-bottom: 80px; /* Space between content and footer */
+    flex: 1; /* Allow container to take available space */
 }
 
 /* Section Title Styles */
@@ -160,10 +163,8 @@ footer {
     border-top: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    width: 100%;
-    box-sizing: border-box;
-    position: absolute; /* Ensure it extends the full width */
-    bottom: 0; /* Stick it to the bottom */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 /* Smooth Scrolling */
