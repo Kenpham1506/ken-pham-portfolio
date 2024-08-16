@@ -2,9 +2,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0 20px; /* Add padding to the left and right */
+    padding: 20px 0; /* Add space on top and bottom */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 /* Header Styles */
@@ -20,11 +19,7 @@ header {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid #ddd;
-    transition: padding 0.3s, font-size 0.3s;
-}
-
-header.scrolled {
-    padding: 5px 20px;
+    transition: padding 0.3s, font-size 0.3s; /* Smooth transition for padding and font-size */
 }
 
 .logo {
@@ -32,43 +27,40 @@ header.scrolled {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
+    transition: width 0.3s, height 0.3s; /* Smooth transition for logo size */
 }
 
 .header-text {
     display: inline-block;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s; /* Smooth transition for font size */
 }
 
-header p {
+.subheader {
     margin: 5px 0 0;
     font-size: 14px;
     color: #666;
-    transition: font-size 0.3s, opacity 0.3s;
-}
-
-header.scrolled .header-text p {
-    font-size: 10px;
-    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s; /* Smooth transition for font size and opacity */
 }
 
 /* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
+    margin-top: 60px; /* Account for fixed header */
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
-    position: fixed;
+    position: sticky;
     top: 60px;
-    left: 0;
-    right: 0;
     z-index: 999;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 nav a {
@@ -86,7 +78,7 @@ nav a:hover {
 
 /* Container Styles */
 .container {
-    margin-top: 80px; /* Adjusted for fixed header and nav */
+    margin-top: 20px;
     padding: 0 20px; /* Left and right padding for the content */
 }
 
@@ -165,6 +157,35 @@ footer {
     border-top: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative; /* Ensure it extends the full width */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+nav a {
+    scroll-margin-top: 20px; /* Offset the scrolling position to prevent header overlap */
+}
+
+/* Shrinking Header Styles */
+.shrink header {
+    padding: 5px 10px; /* Smaller padding */
+}
+
+.shrink .logo {
+    width: 30px;
+    height: 30px;
+}
+
+.shrink .header-text h1 {
+    font-size: 20px;
+}
+
+.shrink .subheader {
+    font-size: 12px;
+    opacity: 0;
 }
