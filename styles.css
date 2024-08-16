@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 20px 0; /* Space around the body */
+    padding: 0; /* Remove default padding */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
     min-height: 100vh; /* Ensure body takes up at least the viewport height */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
