@@ -1,163 +1,157 @@
 /* Global Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Google Font */
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0; /* Remove the global padding */
-    color: #333;
-    background: linear-gradient(to bottom right, #fce4ec, #fff9c4); /* Light pink fading into light yellow */
+    padding: 0 20px; /* Add padding to the left and right */
+    background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
 }
 
+/* Header Styles */
 header {
-    background: #ff6f6f; /* Fading red */
-    color: #fff;
-    padding: 20px;
     display: flex;
     align-items: center;
-    gap: 20px; /* Gap between the logo and the text */
-    position: relative;
-    z-index: 10;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
 }
 
-header .logo {
-    width: 60px;
-    height: 60px;
+.logo {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    object-fit: cover;
+    margin-right: 20px;
 }
 
 .header-text {
-    display: flex;
-    flex-direction: column; /* Stack the heading and the subtext vertically */
-    justify-content: center;
+    display: inline-block;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 24px;
 }
 
 header p {
-    margin: 5px 0 0 0;
-    font-size: 1.2em;
-}
-
-nav {
-    background: #ff3d3d; /* Slightly darker red */
-    color: #fff;
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    z-index: 20;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #ff6f6f; /* Fading red */
-}
-
-.container {
-    padding: 20px 40px; /* Added padding to the left and right sides */
-    max-width: 1200px; /* Set a max-width for the content */
-    margin: 0 auto; /* Center the content */
-    box-sizing: border-box; /* Include padding in the element's width */
-}
-
-/* Section Titles */
-.section-title {
-    font-size: 2em;
-    margin: 20px 0;
-    text-align: center;
-}
-
-.section-title a {
-    color: #ff6f6f; /* Fading red */
-    text-decoration: none;
-    border-bottom: 2px solid #ff6f6f;
-}
-
-.section-title a:hover {
-    color: #e74c3c; /* Darker red */
-    border-bottom: 2px solid #e74c3c;
-}
-
-/* Game, Demo, and Bot Sections */
-.game, .demo, .bot {
-    margin-bottom: 30px;
-}
-
-.game iframe, .demo iframe, .bot iframe {
-    border: none;
-    width: 100%;
-    max-width: 100%; /* Ensure iframes don't exceed their container */
-    height: 167px;
-}
-
-.game-description, .demo-description, .bot-description {
-    font-style: italic;
+    margin: 5px 0 0;
+    font-size: 14px;
     color: #666;
 }
 
-/* Contact Form Styling */
-.contact form {
+/* Navigation Styles */
+nav {
     display: flex;
-    flex-direction: column;
-    gap: 15px; /* Increased gap between form elements */
-    max-width: 600px; /* Limit the max width of the form */
-    margin: 0 auto; /* Center the form */
-    padding: 0 20px; /* Add some padding */
+    justify-content: center;
+    margin-top: 80px; /* Account for fixed header */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 70px;
+    z-index: 999;
 }
 
-.contact input, .contact textarea {
-    padding: 15px;
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    width: 100%; /* Full width within the form */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
+    transition: background-color 0.3s;
 }
 
-.contact input[type="text"], 
-.contact input[type="email"] {
-    max-width: 100%; /* Prevent them from exceeding the container width */
+nav a:hover {
+    background-color: #f0f0f0;
 }
 
-.contact textarea {
-    height: 150px; /* Fixed height for the textarea */
-    resize: vertical; /* Allow resizing only vertically */
+/* Container Styles */
+.container {
+    margin-top: 20px;
 }
 
-.contact button {
-    background: #ff6f6f; /* Fading red */
-    color: white;
+/* Section Title Styles */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Game/Demo/Bot Section Styles */
+.game, .demo, .bot {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 552px;
+    height: 167px;
     border: none;
-    padding: 15px;
+}
+
+.game-description, .demo-description, .bot-description {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Contact Form Styles */
+.contact {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical; /* Can only change in height */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    align-self: flex-start; /* Align button to the start of the form */
+    transition: background-color 0.3s;
 }
 
-.contact button:hover {
-    background: #e74c3c; /* Darker red on hover */
+button[type="submit"]:hover {
+    background-color: #555;
 }
 
 /* Footer Styles */
 footer {
-    background: #ff3d3d; /* Slightly darker red */
-    color: #fff;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Additional Padding */
+.container {
+    padding: 0 20px; /* Left and right padding for the content */
 }
