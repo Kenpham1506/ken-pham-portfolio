@@ -6,10 +6,14 @@
     <title>Ken's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logo.png" type="image/png">
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Logo and text aligned side by side -->
         <img src="logo.png" alt="Ken's Logo" class="logo">
         <div class="header-text">
             <h1>Ken's Portfolio</h1>
@@ -76,7 +80,6 @@
                 <h3><a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo Check-in Bot</a></h3>
                 <iframe frameborder="0" src="https://itch.io/embed/2837376" width="552" height="167"><a href="https://ken-pham.itch.io/mihoyo-check-in-bot">Mihoyo Check-in Bot by Ken's Studio</a></iframe>
                 <p class="bot-description">An automation system that interacts with the Mihoyo API website, a Discord bot to receive and update user information into a database, and a .js bot using cloud computing and Google Sheets as a database. Combined these elements to create the bot.</p>
-
             </div>
         </section>
 
@@ -96,5 +99,32 @@
     <footer>
         <p>&copy; 2024 Ken's Portfolio. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor click behavior
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offset = -20; // Offset to scroll slightly past the header
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = targetElement.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition + offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth' // Smooth scroll
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
