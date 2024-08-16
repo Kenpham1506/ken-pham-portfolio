@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif; /* Google Font */
     margin: 0;
-    padding: 0;
+    padding: 0 20px; /* Added padding to the left and right sides of the entire page */
     color: #333;
     background: linear-gradient(to bottom right, #fce4ec, #fff9c4); /* Light pink fading into light yellow */
 }
@@ -11,15 +11,14 @@ header {
     background: #ff6f6f; /* Fading red */
     color: #fff;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Gap between the logo and the header text */
     position: relative;
     z-index: 10;
 }
 
 header .logo {
-    position: absolute;
-    left: 20px;
-    top: 20px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -61,7 +60,7 @@ nav a:hover {
 }
 
 .container {
-    padding: 20px;
+    padding: 20px 0; /* Adjusted padding to top and bottom */
 }
 
 /* Section Titles */
