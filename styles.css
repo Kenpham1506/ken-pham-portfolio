@@ -2,12 +2,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0; /* Remove default padding */
+    padding: 20px 0; /* Space on top and bottom */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
-    min-height: 100vh; /* Ensure body takes up at least the viewport height */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-    display: flex;
-    flex-direction: column;
 }
 
 /* Header Styles */
@@ -23,7 +19,7 @@ header {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid #ddd;
-    transition: padding 0.3s, font-size 0.3s; /* Smooth transition for padding and font-size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -31,68 +27,70 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
-    transition: width 0.3s, height 0.3s; /* Smooth transition for logo size */
 }
 
 .header-text {
     display: inline-block;
-    transition: opacity 0.3s, transform 0.3s;
 }
 
 header h1 {
     margin: 0;
-    font-size: 24px;
-    transition: font-size 0.3s; /* Smooth transition for font size */
+    font-size: 28px;
+    color: #333;
 }
 
-.subheader {
+header p {
     margin: 5px 0 0;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
-    transition: font-size 0.3s, opacity 0.3s; /* Smooth transition for font size and opacity */
 }
 
 /* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 60px; /* Account for fixed header */
+    margin-top: 80px; /* Account for fixed header */
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     position: sticky;
-    top: 70px;
+    top: 70px; /* Adjusted for new header size */
     z-index: 999;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 nav a {
     margin: 0 20px;
     text-decoration: none;
     color: #333;
-    padding: 10px;
+    padding: 10px 15px; /* Increased padding for better click area */
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
     background-color: #f0f0f0;
+    color: #007bff; /* Change text color on hover */
 }
 
 /* Container Styles */
 .container {
-    margin-top: 20px;
+    margin: 20px auto; /* Space between body and footer */
     padding: 0 20px; /* Left and right padding for the content */
-    padding-bottom: 80px; /* Space between content and footer */
-    flex: 1; /* Allow container to take available space */
+    max-width: 1200px; /* Maximum width for large screens */
 }
 
 /* Section Title Styles */
 .section-title {
     text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px; /* Larger font size */
+    font-weight: 600; /* Bold text */
+    margin-bottom: 30px;
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Underline with a color */
+    display: inline-block;
+    padding-bottom: 10px; /* Space between text and underline */
 }
 
 /* Game/Demo/Bot Section Styles */
@@ -165,6 +163,7 @@ footer {
     backdrop-filter: blur(10px);
     width: 100%; /* Full width */
     box-sizing: border-box; /* Ensure padding is included in the element's width */
+    position: relative;
 }
 
 /* Smooth Scrolling */
@@ -174,23 +173,4 @@ html {
 
 nav a {
     scroll-margin-top: 20px; /* Offset the scrolling position to prevent header overlap */
-}
-
-/* Shrinking Header Styles */
-.shrink header {
-    padding: 5px 10px; /* Smaller padding */
-}
-
-.shrink .logo {
-    width: 30px;
-    height: 30px;
-}
-
-.shrink .header-text h1 {
-    font-size: 20px;
-}
-
-.shrink .subheader {
-    font-size: 12px;
-    opacity: 0;
 }
