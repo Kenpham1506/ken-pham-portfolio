@@ -2,8 +2,10 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 20px 0; /* Add space on top and bottom */
+    padding: 20px 0; /* Space around the body */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
+    min-height: 100vh; /* Ensure body takes up at least the viewport height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Header Styles */
@@ -80,6 +82,7 @@ nav a:hover {
 .container {
     margin-top: 20px;
     padding: 0 20px; /* Left and right padding for the content */
+    padding-bottom: 80px; /* Space between content and footer */
 }
 
 /* Section Title Styles */
@@ -159,7 +162,8 @@ footer {
     backdrop-filter: blur(10px);
     width: 100%;
     box-sizing: border-box;
-    position: relative; /* Ensure it extends the full width */
+    position: absolute; /* Ensure it extends the full width */
+    bottom: 0; /* Stick it to the bottom */
 }
 
 /* Smooth Scrolling */
