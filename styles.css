@@ -54,11 +54,8 @@ nav {
     position: sticky;
     top: 70px;
     z-index: 999;
-    width: 100vw; /* Full width */
-    left: 50%;
-    transform: translateX(-50%); /* Center align to the viewport */
-    padding-left: 0; /* Remove side padding */
-    padding-right: 0; /* Remove side padding */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 nav a {
@@ -155,14 +152,20 @@ footer {
     border-top: 1px solid #ddd;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
-    width: 100vw; /* Full width */
-    left: 50%;
-    transform: translateX(-50%); /* Center align to the viewport */
-    padding-left: 0; /* Remove side padding */
-    padding-right: 0; /* Remove side padding */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 /* Additional Padding */
 .container {
     padding: 0 20px; /* Left and right padding for the content */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+nav a {
+    scroll-margin-top: 20px; /* Offset the scrolling position to prevent header overlap */
 }
