@@ -2,8 +2,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0 20px; /* Add padding to the left and right */
     background: linear-gradient(to bottom right, lightpink, lightyellow); /* Background gradient */
+    box-sizing: border-box; /* Ensure padding is included in the element's width */
 }
 
 /* Header Styles */
@@ -19,7 +20,11 @@ header {
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid #ddd;
-    transition: padding 0.3s, font-size 0.3s; /* Smooth transition */
+    transition: padding 0.3s, font-size 0.3s;
+}
+
+header.scrolled {
+    padding: 5px 20px;
 }
 
 .logo {
@@ -27,41 +32,42 @@ header {
     height: 50px;
     border-radius: 50%;
     margin-right: 20px;
-    transition: width 0.3s, height 0.3s; /* Smooth transition */
 }
 
 .header-text {
-    display: flex;
-    flex-direction: column;
-    transition: opacity 0.3s, transform 0.3s; /* Smooth transition */
+    display: inline-block;
+    transition: opacity 0.3s;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
-    transition: font-size 0.3s; /* Smooth transition */
+    transition: font-size 0.3s;
 }
 
 header p {
     margin: 5px 0 0;
     font-size: 14px;
     color: #666;
+    transition: font-size 0.3s, opacity 0.3s;
+}
+
+header.scrolled .header-text p {
+    font-size: 10px;
+    opacity: 0;
 }
 
 /* Navigation Styles */
 nav {
     display: flex;
     justify-content: center;
-    margin-top: 60px; /* Account for fixed header */
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
     position: fixed;
-    top: 60px; /* Directly below the header */
+    top: 60px;
     left: 0;
     right: 0;
-    width: 100%; /* Full width */
-    box-sizing: border-box; /* Ensure padding is included in the element's width */
     z-index: 999;
 }
 
@@ -80,7 +86,7 @@ nav a:hover {
 
 /* Container Styles */
 .container {
-    margin-top: 120px; /* Space for fixed header and nav */
+    margin-top: 80px; /* Adjusted for fixed header and nav */
     padding: 0 20px; /* Left and right padding for the content */
 }
 
